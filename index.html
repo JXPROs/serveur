@@ -11,37 +11,47 @@
 <body>
   <nav class="navbar">
     <div class="navbar-container">
-      <div class="logo">
-        <img src="logo/zrt4.png" alt="zrt-logo">
+      <!-- Desktop View -->
+      <div class="desktop-view">
+        <div class="logo">
+          <img src="logo/zrt3.png" alt="">
+        </div>
+
+        <div class="search-container">
+          <input type="text" placeholder="Search..." class="search-input">
+          <i data-lucide="search" class="search-icon"></i>
+        </div>
+
+        <div class="nav-items">
+          <button class="nav-item active"><i data-lucide="home"></i></button>
+          <button class="nav-item"><i data-lucide="message-square"></i></button>
+          <button class="nav-item"><i data-lucide="bell"></i></button>
+          <button class="nav-item"><i data-lucide="menu"></i></button>
+        </div>
       </div>
 
-      <div class="search-container">
-        <input type="text" placeholder="Search..." class="search-input">
-        <i data-lucide="search" class="search-icon"></i>
+      <!-- Mobile View -->
+      <div class="mobile-view">
+        <!-- First Block: Logo and Search -->
+        <div class="mobile-block">
+          <div class="logo">
+            <i data-lucide="video" class="logo-icon"></i>
+          </div>
+          <button class="nav-item search-btn">
+            <i data-lucide="search"></i>
+          </button>
+        </div>
+
+        <!-- Second Block: Navigation Icons -->
+        <div class="mobile-block">
+          <div class="nav-items">
+            <button class="nav-item active"><i data-lucide="home"></i></button>
+            <button class="nav-item"><i data-lucide="message-square"></i></button>
+            <button class="nav-item"><i data-lucide="bell"></i></button>
+            <button class="nav-item"><i data-lucide="menu"></i></button>
+          </div>
+        </div>
       </div>
-
-      <div class="nav-items">
-        <button class="nav-item"><i data-lucide="home"></i></button>
-        <button class="nav-item"><i data-lucide="message-square"></i></button>
-        <button class="nav-item"><i data-lucide="bell"></i></button>
-        <button class="nav-item"><i data-lucide="menu"></i></button>
-      </div>
-
-      <button class="mobile-menu-btn">
-        <i data-lucide="menu"></i>
-      </button>
-    </div>
-
-    <div class="mobile-search">
-      <input type="text" placeholder="Search..." class="search-input">
-      <i data-lucide="search" class="search-icon"></i>
-    </div>
-
-    <div class="mobile-menu">
-      <button class="mobile-nav-item"><i data-lucide="home"></i></button>
-      <button class="mobile-nav-item"><i data-lucide="message-square"></i></button>
-      <button class="mobile-nav-item"><i data-lucide="bell"></i></button>
-      <button class="mobile-nav-item"><i data-lucide="menu"></i></button>
     </div>
   </nav>
 

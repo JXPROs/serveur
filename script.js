@@ -1,16 +1,17 @@
+// Initialize Lucide icons
 lucide.createIcons();
 
-// Mobile menu functionality
-const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-const mobileMenu = document.querySelector('.mobile-menu');
-let isMenuOpen = false;
+// Navigation active state
+const navItems = document.querySelectorAll('.nav-item');
 
-mobileMenuBtn.addEventListener('click', () => {
-  isMenuOpen = !isMenuOpen;
-  mobileMenu.classList.toggle('active');
-  
-  // Change menu icon when opened/closed
-  const menuIcon = mobileMenuBtn.querySelector('i');
-  menuIcon.setAttribute('data-lucide', isMenuOpen ? 'x' : 'menu');
-  lucide.createIcons();
+navItems.forEach(item => {
+  item.addEventListener('click', () => {
+    // Skip for search button
+    if (item.classList.contains('search-btn')) return;
+    
+    // Remove active class from all items
+    navItems.forEach(navItem => navItem.classList.remove('active'));
+    // Add active class to clicked item
+    item.classList.add('active');
+  });
 });
